@@ -1,0 +1,62 @@
+appId: com.swaglabsmobileapp # Replace with your app's package name
+---
+- launchApp
+- tapOn: "Username" # text selector
+- inputText: "standard_user"
+- tapOn: "Password" # text selector
+- inputText:
+    text: "secret_sauce"
+- tapOn: "Login" # text selector
+- assertVisible: '.*PRODUCTS.*' # assert the element is visible by regex selector
+- tapOn:
+    text: "test-ADD TO CART"
+    index: 0
+- tapOn: "test-Modal Selector Button" # content-desc selector
+- tapOn: ".*low to high.*" # regex selector
+- tapOn:
+    text: "test-ADD TO CART" 
+    index: 0
+- scroll # default direction is down
+- tapOn:
+    text: "ADD TO CART"
+    index: 1
+- tapOn:    # text + relative position (above, below, leftOf, rightOf).
+    text: "ADD TO CART"
+    below:
+        text:  ".*Test.allTheThings().*"
+- scrollUntilVisible:  # scroll until the element is visible
+    element:
+      text: "$49.99"
+    visibilityPercentage: 100 # visibility percentage
+- tapOn: "test-Cart" # content-desc selector
+- scrollUntilVisible:
+    element:
+      text: "checkout"
+    speed: 70 # scroll speed
+    visibilityPercentage: 100
+- tapOn: "checkout" # text selector
+- tapOn: "First Name" # text selector
+- inputText:
+    text: "John"
+- tapOn: "Last Name"
+- inputText:
+     text: "Deo"
+- tapOn: ".*Postal Code.*" # regex selector
+- inputRandomNumber:  # input random number of length 4
+    length: 4
+- hideKeyboard      # hide the keyboard
+- tapOn: "Continue"
+- extendedWaitUntil:   # wait until the element is visible
+    visible: ".*checkout: overview.*"
+    timeout: 10000  # timeout in milliseconds
+- scrollUntilVisible:
+    element:
+      text: "finish"
+    speed: 80
+    visibilityPercentage: 100
+- tapOn: "finish"     
+- assertVisible: '.*THANK YOU FOR YOU ORDER.*' # assert the element is visible by regex selector
+- tapOn: "test-Menu"
+- tapOn: "logout"
+- stopApp # close the app
+    
