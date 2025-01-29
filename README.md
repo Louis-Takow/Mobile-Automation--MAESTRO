@@ -1,6 +1,3 @@
-Here’s an updated `README.md` that includes the use of **Maestro Studio** and best practices, without the main flow of the script section:
-
-```markdown
 # Mobile-Automation--MAESTRO
 
 ## Overview
@@ -12,9 +9,6 @@ The framework leverages **Maestro Studio** for visual debugging and simplifies m
 
 1. **Maestro**: Follow the [Maestro installation guide](https://docs.maestro.mobile) to set up Maestro on your system.
 2. **Android Emulator or Device**: Ensure you have an Android emulator set up via **Android Studio** or a physical Android device connected.
-3. **Maestro Studio**: Download and install **Maestro Studio** for visual test creation and inspection.
-4. **Appium (optional)**: If you plan to use Appium for additional interaction or UI element inspection, ensure it’s set up.
-5. **Maestro App**: Download and install the Maestro app on your Android device for executing the script.
 
 ## Steps to Set Up and Run Tests
 
@@ -69,7 +63,7 @@ Instead of relying on fixed wait times, the script uses explicit waits and selec
 
 ### 2. **Efficient Element Locators**
 
-We use a combination of text selectors, regex selectors, and relative positioning to target UI elements accurately. This helps avoid brittle locators that break easily with minor changes in the UI.
+Implemented a combination of text selectors, regex selectors, and relative positioning to target UI elements accurately. This helps avoid brittle locators that break easily with minor changes in the UI.
 
 ### 3. **Modular Test Cases**
 
@@ -85,7 +79,7 @@ The test setup is designed to be environment-agnostic, meaning that the configur
 
 ### 6. **Test Assertions**
 
-After key actions like logging in and completing checkout, we assert the presence of specific elements (e.g., product listings, confirmation messages) to verify the expected outcome.
+After key actions like logging in and completing checkout, assertion for the presence of specific elements has been implemented (e.g., product listings, confirmation messages) to verify the expected outcome.
 
 ### 7. **Comprehensive Error Handling**
 
@@ -95,14 +89,11 @@ The script includes error handling techniques like `assertVisible` and custom wa
 
 - **App Installation**: Ensure the app is correctly installed on the emulator or device. You can verify this using `adb devices` or opening the app manually.
 - **App ID**: Double-check the `appId` in the script to match the package name of the app.
-- **Element Selectors**: If an element is not found, use the Appium Inspector or Maestro’s element inspector to find the correct selector.
+- **Element Selectors**: If an element is not found, use the Maestro studio to inspect elements and debug locators.
 - **Emulator Issues**: If the emulator is not detected, ensure it’s running properly and that the environment variables are set correctly.
 
 ## Conclusion
 
 This project provides a simple yet powerful framework to automate mobile app testing using **Maestro**. By leveraging **Maestro Studio** for visual debugging and following best practices, you can efficiently test and troubleshoot Android applications with minimal setup.
 
-Modify and extend the test scripts as needed to suit your specific project requirements. Happy testing!
-```
-
-This `README.md` now includes instructions on using **Maestro Studio**, highlights best practices implemented in the test, and omits the main flow section of the script. It provides a comprehensive guide on how to use **Maestro** in combination with your mobile automation tests.
+## Author: Louis Takow
