@@ -10,6 +10,7 @@ The framework leverages **Maestro Studio** for visual debugging and simplifies m
 1. **Maestro**: Follow the [Maestro installation guide](https://docs.maestro.mobile) to set up Maestro on your system.
 2. **Android Emulator or Device**: Ensure you have an Android emulator set up via **Android Studio** or a physical Android device connected.
 3. **Swag Labs Mobile App**: Install the open-source **Swag Labs** mobile app on your emulator or physical device.
+4. **Appium Desktop GUI (optional)**: If you plan to use Appium inspector for additional interaction or UI element inspection, ensure it’s set up.
 
 ## Steps to Set Up and Run Tests
 
@@ -109,7 +110,7 @@ The script includes error handling techniques like `assertVisible` and custom wa
 
 - **App Installation**: Ensure the app is correctly installed on the emulator or device. You can verify this using `adb devices` or opening the app manually.
 - **App ID**: Double-check the `appId` in the script to match the package name of the Swag Labs app.
-- **Element Selectors**: If an element is not found, use Maestro Studio to inspect elements and debug locators.
+- **Element Selectors**: If an element is not found, use Maestro Studio or Appium inspector to inspect elements and debug locators.
 - **Emulator Issues**: If the emulator is not detected, ensure it’s running properly and that the environment variables are set correctly.
 
 ## Conclusion
