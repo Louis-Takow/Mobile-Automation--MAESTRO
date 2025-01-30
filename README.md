@@ -30,7 +30,10 @@ appId: com.swaglabsmobileapp # Replace with the app's package name
 ```
 
 ### 3. Run the Smoke Test
-
+Navigate to test file directory e.g 
+```bash
+cd C:\Users\{username}\Desktop\Maestro Test\test-flows
+```
 To run the smoke test, use the following command in the terminal:
 ```bash
 maestro test smoke_test.yaml
